@@ -21,4 +21,5 @@ class ListsController < ApplicationController
     redirect_to @list
   end
 
+
 end
