@@ -5,3 +5,10 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+# List.create(title: "Favorite Animals")
+# List.create(title: "Groceries")
+
+ToDoItem.create(item: "Manatees", list_id: 1)
+ToDoItem.create(item: "Dogs", list_id: 1)
+ToDoItem.create(item: "Hummus", list_id: 2)

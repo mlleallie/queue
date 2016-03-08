@@ -1,0 +1,7 @@
+<h1>Sundry Queues</h1>
+
+<ul>
+<% @lists.each do |list| %>
+  <li><%= link_to(list.title, list) %></li>
+<% end %>
+</ul>
