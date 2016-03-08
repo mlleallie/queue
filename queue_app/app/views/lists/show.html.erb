@@ -1,8 +1,10 @@
 <h1><%= @list.title %></h1>
 
 <% @todos.each do |todo| %>
-<p> <%= todo.item %> </p>
+<p><%= todo.item %></p>
 <%end%>
 
+
 <%= link_to 'New Queue Item', new_to_do_item_path %>
+<%= button_to "delete", @list, :method=>:delete, :class=>:destroy %>
 
