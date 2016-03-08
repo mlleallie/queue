@@ -4,7 +4,8 @@
 <p><%= todo.item %></p>
 <%end%>
 
-
-<%= link_to 'New Queue Item', new_to_do_item_path %>
+<%= link_to "New Queue Item!", controller: "to_do_items", action: "new", list_id: @list.id %>
+<!-- <a href="/to_do_items/new?list_id=1">New Queue Item</a> -->
+<% #link_to 'New Queue Item', new_to_do_item_path %>
 <%= button_to "delete", @list, :method=>:delete, :class=>:destroy %>
 
