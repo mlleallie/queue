@@ -1,7 +1,9 @@
 <h1> New Item</h1>
 
 <%= form_for @todo do |todo| %>
-  <%= todo.label " list Item" %><br>
+  <%= todo.label "List Item" %><br>
   <%= todo.text_area :item, size: "60x5" %><br>
+  <%= todo.label "List ID" %><br>
+  <%= todo.text_area :list_id, size: "60x5" %><br>
   <%= todo.submit "Create" %>
 <% end %>

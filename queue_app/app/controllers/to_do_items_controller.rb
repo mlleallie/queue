@@ -10,9 +10,9 @@ class ToDoItemsController < ApplicationController
   def create
 
     @todo = ToDoItem.new
-    @todo.item = params["to_do_item"]["item"]
+    @todo.item = params["todo"]["item"]
+    @todo.list_id = params["todo"]["list_id"]
     @todo.save
-    @show_to_do = @todo.list_id
 
     redirect_to :back
 
