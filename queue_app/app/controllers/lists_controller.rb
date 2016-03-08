@@ -6,6 +6,19 @@ class ListsController < ApplicationController
 
   def show
     @list = List.find(params[:id])
+    @todos = @list.to_do_items
+  end
+
+  def new
+    @list = List.new
+  end
+
+  def create
+    @list = List.new
+    @list.title = params["list"]["title"]
+    @list.save
+
+    redirect_to @list
   end
 
 end
