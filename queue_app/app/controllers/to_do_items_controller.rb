@@ -17,4 +17,10 @@ class ToDoItemsController < ApplicationController
 
   end
 
+  def destroy
+    @item = ToDoItem.find(params[:id])
+    @item.destroy
+    redirect_to :back
+  end
+
 end

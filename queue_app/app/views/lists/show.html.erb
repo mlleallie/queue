@@ -1,7 +1,7 @@
 <h1><%= @list.title %></h1>
 
 <% @todos.each do |todo| %>
-<p><%= todo.item %></p>
+<p><%= todo.item %>  <%= link_to "delete", todo, method: :delete %></p>
 <%end%>
 
 <%= link_to "New Queue Item!", controller: "to_do_items", action: "new", list_id: @list.id %>
