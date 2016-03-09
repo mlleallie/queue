@@ -3,7 +3,6 @@
 <%= form_for @todo do |todo| %>
   <%= todo.label :item %><br>
   <%= todo.text_area :item, size: "60x5" %><br>
-  <%= todo.label :list_id %><br>
-  <%= todo.text_area :list_id, size: "60x5" %><br>
+  <%= todo.hidden_field :list_id, value: @list_id, size: "10x2" %><br>
   <%= todo.submit "Create" %>
 <% end %>

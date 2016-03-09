@@ -1,11 +1,8 @@
 class ToDoItemsController < ApplicationController
 
-#require "cgi"
-
   def new
-
     @todo = ToDoItem.new
-    #@id = params[:list_id]
+    @list_id = params[:list_id]
 
   end
 
@@ -16,9 +13,7 @@ class ToDoItemsController < ApplicationController
     @todo.list_id = params["to_do_item"][:list_id]
     @todo.save
 
-    #@id = cgi.list_id
-
-    redirect_to :back
+    redirect_to list_path(@todo.list_id)
 
   end
 
